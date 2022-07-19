@@ -42,7 +42,7 @@ void quick_sort_helper(int *array, int start, int end, size_t size)
  * @end: end of the parent partition
  * @size: actual size of the array
  *
- * Returns: a new pivot
+ * Return: a new pivot
  */
 int quick_sort_partition(int *array, int start, int end, size_t size)
 {
