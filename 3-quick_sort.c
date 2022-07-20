@@ -53,14 +53,18 @@ int quick_sort_partition(int *array, int start, int end, size_t size)
 		if (array[i] < pivot)
 		{
 			++pIndex;
-			swap_ints(&array[i], &array[pIndex]);
-			if (i != pIndex)
+			if (array[i] != array[pIndex])
+			{
+				swap_ints(&array[i], &array[pIndex]);
 				print_array(array, size);
+			}
 		}
 	++pIndex;
-	swap_ints(&array[pIndex], &array[end]);
-	if (pIndex != end)
+	if (array[pIndex] != array[end])
+	{
+		swap_ints(&array[pIndex], &array[end]);
 		print_array(array, size);
+	}
 	return (pIndex);
 }
 
